@@ -1,0 +1,38 @@
+export const products = [
+    {
+        id: "1",
+        title: "Coca Cola",
+        price: 10000,
+        stock: 200,
+        description: "La misma de siempre",
+        category: "2,25L",
+        imageUrl: "https://res.cloudinary.com/dksczrvfd/image/upload/v1728141570/funda_coca_cola_225_litros-e1568916169235.jpg",
+    },
+    {
+        id: "2",
+        title: "Fanta",
+        price: 10000,
+        stock: 150,
+        description: "La misma de siempre",
+        category: "2,25L",
+        imageUrl: "https://res.cloudinary.com/dksczrvfd/image/upload/v1728141718/b111-e5dcb88f853f50342516742269281111-640-0.jpg",
+    },
+    {
+        id: "3",
+        title: "Coca Cola",
+        price: 8000,
+        stock: 100,
+        description: "La misma de siempre",
+        category: "0,5L",
+        imageUrl: "https://res.cloudinary.com/dksczrvfd/image/upload/v1728141631/Gaseosa-Coca-Cola-500-Cc-COCA-COLA--------X500ML-1-3024.jpg.webp",
+    },
+    {
+        id: "4",
+        title: "Fanta",
+        price: 8000,
+        stock: 200,
+        description: "La misma de siempre",
+        category: "0,5L",
+        imageUrl: "https://res.cloudinary.com/dksczrvfd/image/upload/v1728141724/782920-800-600.webp",
+    },
+];
