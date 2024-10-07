@@ -1,30 +1,28 @@
 import Navbar from "./components/layouts/navbar/Navbar";
+import CartContainer from "./components/pages/cart/CartContainer";
+import ItemDetailContainer from "./components/pages/itemDetail/ItemDetailContainer";
 import ItemListContainer from "./components/pages/itemListContainer/ItemListContainer";
-import { useState } from "react";
+import { BrowserRouter, Route, Routes} from "react-router-dom"
 
-
-function App (){
-  const [montarComponente, setMontarComponente] = useState(false);
-  const montarYdesmontar = () => {
-    setMontarComponente(!montarComponente);
-  };
-  const [saludo, setSaludo] = useState("hola");
-
-  const cambiarSaludo = () => {
-    if (saludo === "hola") {
-      setSaludo("chau");
-    } else {
-      setSaludo("hola");
-    }
-  };
+function App() {
   return (
-    <div>
-        <Navbar/>
-        {montarComponente ? <ItemListContainer greeting={saludo} /> : null}
-        <button onClick={montarYdesmontar}>Montar/desmontar</button>
-        <button onClick={cambiarSaludo}>Cambiar saludo</button>
-    </div>
-  )
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path={"/"} element={<ItemListContainer />} />
+        <Route
+          path={"/category/:categoryName"}
+          element={<ItemListContainer />}
+        />
+
+        <Route path={"/cart"} element={<CartContainer />} />
+
+        <Route path={"/productDetail/:id"} element={<ItemDetailContainer />} />
+
+        <Route path="*" element={<h2>404 not found</h2>} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default App;
